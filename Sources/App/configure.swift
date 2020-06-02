@@ -45,5 +45,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
 
     migrations.add(model: Acronym.self, database: DatabaseIdentifier<Acronym.Database>.mysql)
 
+    migrations.add(model: User.self, database: DatabaseIdentifier<User.Database>.mysql)
+
     services.register(migrations)
 }
